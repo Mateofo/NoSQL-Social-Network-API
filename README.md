@@ -47,3 +47,6 @@ MIT
   ## Additional Info:
   - Github: [Mateofo](https://github.com/Mateofo)
   - Email: n/a 
+
+  ## Video Recording
+  - https://drive.google.com/file/d/1LdIpA0UIay5YP5GCsGCKJdklheFEDrBk/view
