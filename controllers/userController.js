@@ -25,7 +25,7 @@ module.exports = {
   updateUser(req,res) {
     User.findOneAndUpdate(
       { _id: req.params.userId }, 
-      { $set: req.body }, 
+      { $set:{userName: req.body.username} }, 
       { new: true }
     )
     .then((user) => res.json(user)) 
@@ -39,7 +39,7 @@ module.exports = {
   },
 
   addFriend(req, res) {
-    console.log('You are adding a friend');
+    console.log('Added a friend');
     User.findOneAndUpdate(
       { _id: req.params.userId },
       { $addToSet: { friends: req.params.friendId } },
@@ -50,7 +50,7 @@ module.exports = {
   },
 
   removeFriend(req, res) {
-    console.log('You are removing a friend');
+    console.log('Removed a friend');
     User.findOneAndUpdate(
       { _id: req.params.userId },
       { $pull: { friends: req.params.friendId } },
